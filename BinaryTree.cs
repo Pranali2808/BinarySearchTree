@@ -30,6 +30,7 @@ namespace BinarySearchTree
                     this.LeftTree = new BinaryTree<T>(item);
                 else
                     this.LeftTree.Insert(item);
+                     this.leftCount++;
             }
             else
             {
@@ -37,19 +38,20 @@ namespace BinarySearchTree
                     this.RightTree = new BinaryTree<T>(item);
                 else
                     this.RightTree.Insert(item);
+                    this.rightCount++;
             }
         }
         public void Display()
         {
             if (this.LeftTree != null)
             {
-                this.leftCount++;
+               
                 this.LeftTree.Display();
             }
             Console.WriteLine(this.NodeData.ToString());
             if (this.RightTree != null)
             {
-                this.rightCount++;
+               
                 this.RightTree.Display();
             }
         }
